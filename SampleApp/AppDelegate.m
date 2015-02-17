@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -15,8 +16,23 @@
 @implementation AppDelegate
 
 
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // This method runs right after the application finishes launching
+    
+    // Allocates memory for an instance of the 'ViewController' class and calls it 'rootViewController'
+    ViewController *rootViewController = [[ViewController alloc] init];
+    
+    // Sets the 'rootViewController' instance as the window of the app <-- is this accurate? 
+    self.window.rootViewController = rootViewController;
+    
+    // This is a convenience method to make the receiver the main window and displays it in front of other windows at the same window level or lower.
+    // What is the receiver in this situation?
+    // Are there any other windows?
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

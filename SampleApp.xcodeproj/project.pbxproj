@@ -10,9 +10,7 @@
 		D01E0F4A1A92D8130006C70D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D01E0F491A92D8130006C70D /* main.m */; };
 		D01E0F4D1A92D8130006C70D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D01E0F4C1A92D8130006C70D /* AppDelegate.m */; };
 		D01E0F501A92D8130006C70D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01E0F4F1A92D8130006C70D /* ViewController.m */; };
-		D01E0F531A92D8130006C70D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D01E0F511A92D8130006C70D /* Main.storyboard */; };
 		D01E0F551A92D8130006C70D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D01E0F541A92D8130006C70D /* Images.xcassets */; };
-		D01E0F581A92D8130006C70D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D01E0F561A92D8130006C70D /* LaunchScreen.xib */; };
 		D01E0F641A92D8130006C70D /* SampleAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D01E0F631A92D8130006C70D /* SampleAppTests.m */; };
 /* End PBXBuildFile section */
 
@@ -34,9 +32,7 @@
 		D01E0F4C1A92D8130006C70D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D01E0F4E1A92D8130006C70D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D01E0F4F1A92D8130006C70D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		D01E0F521A92D8130006C70D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D01E0F541A92D8130006C70D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		D01E0F571A92D8130006C70D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D01E0F5D1A92D8130006C70D /* SampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D01E0F621A92D8130006C70D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D01E0F631A92D8130006C70D /* SampleAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleAppTests.m; sourceTree = "<group>"; };
@@ -85,9 +81,7 @@
 				D01E0F4C1A92D8130006C70D /* AppDelegate.m */,
 				D01E0F4E1A92D8130006C70D /* ViewController.h */,
 				D01E0F4F1A92D8130006C70D /* ViewController.m */,
-				D01E0F511A92D8130006C70D /* Main.storyboard */,
 				D01E0F541A92D8130006C70D /* Images.xcassets */,
-				D01E0F561A92D8130006C70D /* LaunchScreen.xib */,
 				D01E0F471A92D8130006C70D /* Supporting Files */,
 			);
 			path = SampleApp;
@@ -199,8 +193,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D01E0F531A92D8130006C70D /* Main.storyboard in Resources */,
-				D01E0F581A92D8130006C70D /* LaunchScreen.xib in Resources */,
 				D01E0F551A92D8130006C70D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,25 +234,6 @@
 			targetProxy = D01E0F5E1A92D8130006C70D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		D01E0F511A92D8130006C70D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D01E0F521A92D8130006C70D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D01E0F561A92D8130006C70D /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D01E0F571A92D8130006C70D /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D01E0F651A92D8130006C70D /* Debug */ = {
