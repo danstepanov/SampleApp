@@ -22,15 +22,32 @@
     
     // This method runs right after the application finishes launching
     
-    // Allocates memory for an instance of the 'ViewController' class and calls it 'rootViewController'
+    // 0. Initialize the window; it's a strong property, defined in this class (see header file).
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    // 1. Allocates memory for an instance of the 'ViewController' class
     ViewController *rootViewController = [[ViewController alloc] init];
     
-    // Sets the 'rootViewController' instance as the window of the app <-- is this accurate? 
-    self.window.rootViewController = rootViewController;
+    // 2. Use a UINavigationController, since things get wonkey when VC's don't have "Parent" view controllers.
+    // NOTE: you could also make this a property of AppDelegate to do hacky pushing of VC's / quick stuff later.
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
     
-    // This is a convenience method to make the receiver the main window and displays it in front of other windows at the same window level or lower.
-    // What is the receiver in this situation?
-    // Are there any other windows?
+    // 3. If you want to customize the navigationConttroller, e.g. whether the navigationBar is visible, do it here.
+    [navigationController setNavigationBarHidden:YES animated:YES];
+    
+    // 4. set the rootViewController property of the Application's window
+    // (Some UIApplication (probably?) object has a weak reference to our self.window)
+    self.window.rootViewController = navigationController;
+    
+    // You can add windows if I believe correctly, but you typically do so in implementing UIAlertBox's, which are just UIView's
+    // Having multiple ViewController's on the same screen at the same time involves implementing a "Parent" view controller.
+    // You also typically would not do that in this method.
+    
+    // 5. Apple header file says for -[UIWindow makeKeyAndVisible]
+    //   > convenience. most apps call this to show the main window
+    //   > and also make it key. otherwise use view hidden property
+    // so this makes this window key (i.e. receive touch events, rather than an alert box which becomes Key when on screen)
+    // and also sets the visible property.
     [self.window makeKeyAndVisible];
     
     return YES;
